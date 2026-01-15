@@ -1,10 +1,10 @@
-import postgresPlugin from '@neondatabase/vite-plugin-postgres'
+import { postgres } from "vite-plugin-db";
 
-export default postgresPlugin({
+export default postgres({
   seed: {
-    type: 'sql-script',
-    path: 'db/init.sql',
+    type: "sql-script",
+    path: "db/init.sql",
   },
-  referrer: 'create-tanstack',
-  dotEnvKey: 'VITE_DATABASE_URL',
-})
+  referrer: "create-tanstack",
+  dotEnvKey: "VITE_DATABASE_URL",
+});
